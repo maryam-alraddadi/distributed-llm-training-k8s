@@ -44,9 +44,9 @@ module "eks" {
       ami_type       = "AL2_x86_64_GPU"  # GPU AMI (still AL2-based)
       instance_types = ["g4dn.xlarge"]   # 4 vCPUs, 16GB RAM, 1 T4 GPU
 
-      min_size     = 0
-      max_size     = 2  # 2 nodes × 4 vCPUs = 8 (your quota limit)
-      desired_size = 1  # Start with 1 to avoid quota race condition
+      min_size     = 1
+      max_size     = 2  
+      desired_size = 2 
       
       # Labels help Kubernetes schedule ONLY training jobs on these nodes
       labels = {
