@@ -1,0 +1,72 @@
+apiVersion: kubeflow.org/v2beta1
+kind: MPIJob
+metadata:
+  name: bert-dp-1gpu
+spec:
+  slotsPerWorker: 1
+  runPolicy:
+    cleanPodPolicy: None
+  mpiReplicaSpecs:
+    Launcher:
+      replicas: 1
+      template:
+        spec:
+          initContainers:
+            - name: wait-for-dns
+              image: 200227355503.dkr.ecr.us-east-1.amazonaws.com/hpcc-capstone/bert-training:v1
+              command: ["sleep", "30"]
+          containers:
+            - name: launcher
+              image: 200227355503.dkr.ecr.us-east-1.amazonaws.com/hpcc-capstone/bert-training:v1
+              command:
+                - mpirun
+                - --allow-run-as-root
+                - -np
+                - "1"
+                - -bind-to
+                - none
+                - -map-by
+                - slot
+                - -mca
+                - pml
+                - ob1
+                - -mca
+                - btl
+                - ^openib
+                - -mca
+                - btl_tcp_if_include
+                - eth0
+                - -mca
+                - oob_tcp_if_include
+                - eth0
+                - -x
+                - NCCL_SOCKET_IFNAME=eth0
+                - python
+                - /workspace/train_bert.py
+                - --dataset
+                - sst2
+                - --batch-size
+                - "32"
+                - --epochs
+                - "3"
+    Worker:
+      replicas: 1
+      template:
+        spec:
+          containers:
+            - name: worker
+              image: 200227355503.dkr.ecr.us-east-1.amazonaws.com/hpcc-capstone/bert-training:v1
+              command: ["/bin/bash", "-c"]
+              args:
+                - |
+                  echo "StrictModes no" >> /etc/ssh/sshd_config
+                  /usr/sbin/sshd -De
+              resources:
+                limits:
+                  nvidia.com/gpu: 1
+              volumeMounts:
+                - name: output
+                  mountPath: /workspace/output
+          volumes:
+            - name: output
+              emptyDir: {}

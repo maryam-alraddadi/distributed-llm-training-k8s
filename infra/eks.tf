@@ -26,32 +26,64 @@ module "eks" {
       before_compute = true
     }
   }
+  # Allow all TCP traffic between nodes in the cluster (required for MPI
+  # communication: SSH from launcher→workers and orted back-connections).
+  # Without this, the system and GPU node groups have isolated security groups.
+  node_security_group_additional_rules = {
+    ingress_self_all = {
+      description = "Node-to-node all traffic"
+      protocol    = "-1"
+      from_port   = 0
+      to_port     = 0
+      type        = "ingress"
+      self        = true
+    }
+  }
 
   eks_managed_node_groups = {
-    # 1. System Node Group: Small CPUs for running system tools (CoreDNS, Metrics Server)
+    # 1. System Node Group
     system_nodes = {
-      ami_type       = "AL2023_x86_64_STANDARD"  # Amazon Linux 2023
+      ami_type       = "AL2023_x86_64_STANDARD"
       instance_types = ["t3.medium"]
       min_size       = 1
       max_size       = 2
       desired_size   = 1
+
+      # Increase root volume to 100GB
+      block_device_mappings = {
+        xvda = {
+          device_name = "/dev/xvda"
+          ebs = {
+            volume_size = 100
+            volume_type = "gp3" # gp3 is faster and cheaper than older gp2
+          }
+        }
+      }
     }
 
-    # 2. Training Node Group: GPU nodes - start with 1 to fit within 8 vCPU quota
+    # 2. Training Node Group
     gpu_training_nodes = {
       name = "gpu-training-pool"
+      ami_type       = "AL2_x86_64_GPU"
+      instance_types = ["g4dn.xlarge"]
+      min_size       = 0
+      max_size       = 2
+      desired_size   = 2 
       
-      ami_type       = "AL2_x86_64_GPU"  # GPU AMI (still AL2-based)
-      instance_types = ["g4dn.xlarge"]   # 4 vCPUs, 16GB RAM, 1 T4 GPU
-
-      min_size     = 1
-      max_size     = 2  
-      desired_size = 2 
-      
-      # Labels help Kubernetes schedule ONLY training jobs on these nodes
       labels = {
         "role" = "training-worker"
         "accelerator" = "nvidia-t4"
+      }
+
+      #  Increase root volume to 100GB
+      block_device_mappings = {
+        xvda = {
+          device_name = "/dev/xvda"
+          ebs = {
+            volume_size = 100
+            volume_type = "gp3"
+          }
+        }
       }
     }
   }

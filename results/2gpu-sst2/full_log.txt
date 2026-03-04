@@ -1,0 +1,153 @@
+Failed to add the host to the list of known hosts (/root/.ssh/known_hosts).
+Failed to add the host to the list of known hosts (/root/.ssh/known_hosts).
+=======================================================
+  BERT Data-Parallel Training (Horovod + NCCL)
+=======================================================
+  Workers:          2
+  Dataset:          SST2
+  Per-worker batch: 32
+  Global batch:     64
+  Base LR:          2e-05
+  Scaled LR:        4e-05
+  Epochs:           3
+  GPU memory:       15360 MB per device
+
+  Loading and tokenizing dataset ...
+/usr/local/lib/python3.8/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 35.3kB [00:00, 79.4MB/s]/usr/local/lib/python3.8/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 35.3kB [00:00, 86.3MB/s]
+Downloading data:   0%|          | 0.00/3.11M [00:00<?, ?B/s]
+Downloading data:   0%|          | 0.00/3.11M [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.11M/3.11M [00:00<00:00, 41.1MB/s]
+Downloading data:   0%|          | 0.00/72.8k [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.11M/3.11M [00:00<00:00, 41.1MB/s]
+Downloading data:   0%|          | 0.00/72.8k [00:00<?, ?B/s]Downloading data: 100%|██████████| 72.8k/72.8k [00:00<00:00, 1.80MB/s]
+Downloading data:   0%|          | 0.00/148k [00:00<?, ?B/s]Downloading data: 100%|██████████| 72.8k/72.8k [00:00<00:00, 1.82MB/s]
+Downloading data:   0%|          | 0.00/148k [00:00<?, ?B/s]Downloading data: 100%|██████████| 148k/148k [00:00<00:00, 3.35MB/s]
+Generating train split:   0%|          | 0/67349 [00:00<?, ? examples/s]Downloading data: 100%|██████████| 148k/148k [00:00<00:00, 3.57MB/s]
+Generating train split:   0%|          | 0/67349 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 67349/67349 [00:00<00:00, 2340249.70 examples/s]
+Generating validation split:   0%|          | 0/872 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 872/872 [00:00<00:00, 593065.20 examples/s]
+Generating test split:   0%|          | 0/1821 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1821/1821 [00:00<00:00, 992828.23 examples/s]Generating train split: 100%|██████████| 67349/67349 [00:00<00:00, 2283366.99 examples/s]
+Generating validation split:   0%|          | 0/872 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 872/872 [00:00<00:00, 501843.18 examples/s]
+Generating test split:   0%|          | 0/1821 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1821/1821 [00:00<00:00, 850632.32 examples/s]
+Map:   0%|          | 0/67349 [00:00<?, ? examples/s]
+Map:   0%|          | 0/67349 [00:00<?, ? examples/s]Map:   1%|▏         | 1000/67349 [00:00<00:19, 3422.78 examples/s]Map:   1%|▏         | 1000/67349 [00:00<00:20, 3177.19 examples/s]Map:   3%|▎         | 2000/67349 [00:00<00:18, 3513.00 examples/s]Map:   3%|▎         | 2000/67349 [00:00<00:19, 3287.02 examples/s]Map:   4%|▍         | 3000/67349 [00:00<00:18, 3527.33 examples/s]Map:   4%|▍         | 3000/67349 [00:00<00:19, 3319.09 examples/s]Map:   6%|▌         | 4000/67349 [00:01<00:17, 3535.58 examples/s]Map:   6%|▌         | 4000/67349 [00:01<00:19, 3316.65 examples/s]Map:   7%|▋         | 5000/67349 [00:01<00:17, 3532.17 examples/s]Map:   7%|▋         | 5000/67349 [00:01<00:18, 3314.44 examples/s]Map:   9%|▉         | 6000/67349 [00:01<00:17, 3537.54 examples/s]Map:   9%|▉         | 6000/67349 [00:01<00:18, 3327.59 examples/s]Map:  10%|█         | 7000/67349 [00:01<00:16, 3551.49 examples/s]Map:  10%|█         | 7000/67349 [00:02<00:17, 3374.68 examples/s]Map:  12%|█▏        | 8000/67349 [00:02<00:16, 3579.67 examples/s]Map:  12%|█▏        | 8000/67349 [00:02<00:17, 3415.06 examples/s]Map:  13%|█▎        | 9000/67349 [00:02<00:16, 3530.91 examples/s]Map:  13%|█▎        | 9000/67349 [00:02<00:17, 3385.15 examples/s]Map:  15%|█▍        | 10000/67349 [00:02<00:16, 3496.62 examples/s]Map:  15%|█▍        | 10000/67349 [00:02<00:17, 3321.54 examples/s]Map:  16%|█▋        | 11000/67349 [00:03<00:15, 3538.21 examples/s]Map:  16%|█▋        | 11000/67349 [00:03<00:16, 3367.90 examples/s]Map:  18%|█▊        | 12000/67349 [00:03<00:15, 3549.15 examples/s]Map:  18%|█▊        | 12000/67349 [00:03<00:16, 3394.21 examples/s]Map:  19%|█▉        | 13000/67349 [00:03<00:15, 3545.52 examples/s]Map:  19%|█▉        | 13000/67349 [00:03<00:15, 3402.46 examples/s]Map:  21%|██        | 14000/67349 [00:03<00:15, 3510.16 examples/s]Map:  21%|██        | 14000/67349 [00:04<00:15, 3370.71 examples/s]Map:  22%|██▏       | 15000/67349 [00:04<00:15, 3311.95 examples/s]Map:  22%|██▏       | 15000/67349 [00:04<00:16, 3175.33 examples/s]Map:  24%|██▍       | 16000/67349 [00:04<00:15, 3352.39 examples/s]Map:  24%|██▍       | 16000/67349 [00:04<00:16, 3194.18 examples/s]Map:  25%|██▌       | 17000/67349 [00:04<00:14, 3382.88 examples/s]Map:  25%|██▌       | 17000/67349 [00:05<00:15, 3220.48 examples/s]Map:  27%|██▋       | 18000/67349 [00:05<00:14, 3414.16 examples/s]Map:  28%|██▊       | 19000/67349 [00:05<00:14, 3447.75 examples/s]Map:  27%|██▋       | 18000/67349 [00:05<00:14, 3295.01 examples/s]Map:  30%|██▉       | 20000/67349 [00:05<00:13, 3489.25 examples/s]Map:  28%|██▊       | 19000/67349 [00:05<00:14, 3307.71 examples/s]Map:  31%|███       | 21000/67349 [00:06<00:13, 3525.68 examples/s]Map:  30%|██▉       | 20000/67349 [00:06<00:14, 3325.82 examples/s]Map:  33%|███▎      | 22000/67349 [00:06<00:12, 3537.49 examples/s]Map:  31%|███       | 21000/67349 [00:06<00:13, 3345.04 examples/s]Map:  34%|███▍      | 23000/67349 [00:06<00:12, 3529.45 examples/s]Map:  33%|███▎      | 22000/67349 [00:06<00:13, 3347.78 examples/s]Map:  36%|███▌      | 24000/67349 [00:06<00:12, 3561.16 examples/s]Map:  34%|███▍      | 23000/67349 [00:06<00:13, 3343.37 examples/s]Map:  37%|███▋      | 25000/67349 [00:07<00:12, 3403.43 examples/s]Map:  36%|███▌      | 24000/67349 [00:07<00:12, 3400.84 examples/s]Map:  39%|███▊      | 26000/67349 [00:07<00:12, 3434.38 examples/s]Map:  37%|███▋      | 25000/67349 [00:07<00:12, 3406.55 examples/s]Map:  40%|████      | 27000/67349 [00:07<00:11, 3438.98 examples/s]Map:  39%|███▊      | 26000/67349 [00:07<00:12, 3421.54 examples/s]Map:  42%|████▏     | 28000/67349 [00:08<00:11, 3428.28 examples/s]Map:  40%|████      | 27000/67349 [00:08<00:11, 3421.79 examples/s]Map:  43%|████▎     | 29000/67349 [00:08<00:11, 3463.69 examples/s]Map:  42%|████▏     | 28000/67349 [00:08<00:11, 3365.43 examples/s]Map:  45%|████▍     | 30000/67349 [00:08<00:10, 3502.99 examples/s]Map:  43%|████▎     | 29000/67349 [00:08<00:11, 3379.18 examples/s]Map:  46%|████▌     | 31000/67349 [00:08<00:10, 3492.69 examples/s]Map:  45%|████▍     | 30000/67349 [00:08<00:10, 3408.64 examples/s]Map:  48%|████▊     | 32000/67349 [00:09<00:10, 3266.58 examples/s]Map:  46%|████▌     | 31000/67349 [00:09<00:10, 3413.66 examples/s]Map:  49%|████▉     | 33000/67349 [00:09<00:10, 3311.60 examples/s]Map:  48%|████▊     | 32000/67349 [00:09<00:11, 3197.79 examples/s]Map:  50%|█████     | 34000/67349 [00:09<00:09, 3340.49 examples/s]Map:  49%|████▉     | 33000/67349 [00:09<00:10, 3208.45 examples/s]Map:  52%|█████▏    | 35000/67349 [00:10<00:09, 3359.16 examples/s]Map:  50%|█████     | 34000/67349 [00:10<00:10, 3228.61 examples/s]Map:  53%|█████▎    | 36000/67349 [00:10<00:09, 3401.86 examples/s]Map:  52%|█████▏    | 35000/67349 [00:10<00:09, 3254.16 examples/s]Map:  55%|█████▍    | 37000/67349 [00:10<00:08, 3392.77 examples/s]Map:  53%|█████▎    | 36000/67349 [00:10<00:09, 3308.94 examples/s]Map:  56%|█████▋    | 38000/67349 [00:10<00:08, 3451.23 examples/s]Map:  55%|█████▍    | 37000/67349 [00:11<00:09, 3283.44 examples/s]Map:  58%|█████▊    | 39000/67349 [00:11<00:08, 3450.81 examples/s]Map:  56%|█████▋    | 38000/67349 [00:11<00:08, 3346.82 examples/s]Map:  59%|█████▉    | 40000/67349 [00:11<00:07, 3483.29 examples/s]Map:  58%|█████▊    | 39000/67349 [00:11<00:08, 3357.75 examples/s]Map:  61%|██████    | 41000/67349 [00:11<00:07, 3468.91 examples/s]Map:  59%|█████▉    | 40000/67349 [00:11<00:08, 3401.10 examples/s]Map:  62%|██████▏   | 42000/67349 [00:12<00:07, 3500.07 examples/s]Map:  61%|██████    | 41000/67349 [00:12<00:07, 3386.80 examples/s]Map:  64%|██████▍   | 43000/67349 [00:12<00:06, 3495.20 examples/s]Map:  62%|██████▏   | 42000/67349 [00:12<00:07, 3411.66 examples/s]Map:  65%|██████▌   | 44000/67349 [00:12<00:06, 3481.46 examples/s]Map:  64%|██████▍   | 43000/67349 [00:12<00:07, 3376.28 examples/s]Map:  67%|██████▋   | 45000/67349 [00:12<00:06, 3497.58 examples/s]Map:  65%|██████▌   | 44000/67349 [00:13<00:06, 3375.87 examples/s]Map:  68%|██████▊   | 46000/67349 [00:13<00:06, 3481.61 examples/s]Map:  67%|██████▋   | 45000/67349 [00:13<00:06, 3400.90 examples/s]Map:  70%|██████▉   | 47000/67349 [00:13<00:05, 3509.83 examples/s]Map:  68%|██████▊   | 46000/67349 [00:13<00:06, 3404.86 examples/s]Map:  71%|███████▏  | 48000/67349 [00:13<00:05, 3297.71 examples/s]Map:  70%|██████▉   | 47000/67349 [00:14<00:05, 3426.28 examples/s]Map:  73%|███████▎  | 49000/67349 [00:14<00:05, 3319.20 examples/s]Map:  71%|███████▏  | 48000/67349 [00:14<00:06, 3219.69 examples/s]Map:  74%|███████▍  | 50000/67349 [00:14<00:05, 3357.07 examples/s]Map:  73%|███████▎  | 49000/67349 [00:14<00:05, 3248.24 examples/s]Map:  76%|███████▌  | 51000/67349 [00:14<00:04, 3404.45 examples/s]Map:  74%|███████▍  | 50000/67349 [00:15<00:05, 3278.84 examples/s]Map:  77%|███████▋  | 52000/67349 [00:15<00:04, 3394.45 examples/s]Map:  76%|███████▌  | 51000/67349 [00:15<00:04, 3330.19 examples/s]Map:  79%|███████▊  | 53000/67349 [00:15<00:04, 3383.34 examples/s]Map:  77%|███████▋  | 52000/67349 [00:15<00:04, 3326.89 examples/s]Map:  80%|████████  | 54000/67349 [00:15<00:03, 3426.87 examples/s]Map:  79%|███████▊  | 53000/67349 [00:15<00:04, 3353.81 examples/s]Map:  82%|████████▏ | 55000/67349 [00:15<00:03, 3429.97 examples/s]Map:  80%|████████  | 54000/67349 [00:16<00:03, 3390.38 examples/s]Map:  83%|████████▎ | 56000/67349 [00:16<00:03, 3447.00 examples/s]Map:  82%|████████▏ | 55000/67349 [00:16<00:03, 3379.50 examples/s]Map:  85%|████████▍ | 57000/67349 [00:16<00:03, 3430.61 examples/s]Map:  83%|████████▎ | 56000/67349 [00:16<00:03, 3378.06 examples/s]Map:  86%|████████▌ | 58000/67349 [00:16<00:02, 3457.72 examples/s]Map:  85%|████████▍ | 57000/67349 [00:17<00:03, 3404.95 examples/s]Map:  88%|████████▊ | 59000/67349 [00:17<00:02, 3353.15 examples/s]Map:  86%|████████▌ | 58000/67349 [00:17<00:02, 3338.23 examples/s]Map:  89%|████████▉ | 60000/67349 [00:17<00:02, 3411.73 examples/s]Map:  91%|█████████ | 61000/67349 [00:17<00:01, 3453.72 examples/s]Map:  88%|████████▊ | 59000/67349 [00:17<00:02, 3361.19 examples/s]Map:  92%|█████████▏| 62000/67349 [00:17<00:01, 3495.65 examples/s]Map:  89%|████████▉ | 60000/67349 [00:17<00:02, 3365.27 examples/s]Map:  94%|█████████▎| 63000/67349 [00:18<00:01, 3517.14 examples/s]Map:  91%|█████████ | 61000/67349 [00:18<00:01, 3391.23 examples/s]Map:  95%|█████████▌| 64000/67349 [00:18<00:00, 3515.87 examples/s]Map:  92%|█████████▏| 62000/67349 [00:18<00:01, 3333.01 examples/s]Map:  97%|█████████▋| 65000/67349 [00:18<00:00, 3509.29 examples/s]Map:  94%|█████████▎| 63000/67349 [00:18<00:01, 3361.23 examples/s]Map:  98%|█████████▊| 66000/67349 [00:19<00:00, 3536.05 examples/s]Map:  95%|█████████▌| 64000/67349 [00:19<00:00, 3382.09 examples/s]Map:  99%|█████████▉| 67000/67349 [00:19<00:00, 3557.23 examples/s]Map:  97%|█████████▋| 65000/67349 [00:19<00:00, 3381.97 examples/s]Map: 100%|██████████| 67349/67349 [00:19<00:00, 3458.33 examples/s]Map:  98%|█████████▊| 66000/67349 [00:19<00:00, 3408.05 examples/s]
+  Train: 67,349 samples
+  Val:   872 samples
+  Loading BERT-base-uncased ...
+
+Map:   0%|          | 0/872 [00:00<?, ? examples/s]Map:  99%|█████████▉| 67000/67349 [00:20<00:00, 3432.28 examples/s]Map: 100%|██████████| 67349/67349 [00:20<00:00, 3372.63 examples/s]Map: 100%|██████████| 67349/67349 [00:20<00:00, 3344.77 examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2123.38 examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2112.00 examples/s]
+Map:   0%|          | 0/872 [00:00<?, ? examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2081.44 examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2070.18 examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  [Epoch 1] Step    0/1053  Loss: 0.6996  GPU: 100%  Mem: 5460MB
+  [Epoch 1] Step   50/1053  Loss: 0.3237  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  100/1053  Loss: 0.4346  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  150/1053  Loss: 0.3502  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  200/1053  Loss: 0.4046  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  250/1053  Loss: 0.2042  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  300/1053  Loss: 0.1861  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  350/1053  Loss: 0.1030  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  400/1053  Loss: 0.2274  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  450/1053  Loss: 0.1926  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  500/1053  Loss: 0.0421  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  550/1053  Loss: 0.2426  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  600/1053  Loss: 0.0859  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  650/1053  Loss: 0.1401  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  700/1053  Loss: 0.2140  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  750/1053  Loss: 0.1516  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  800/1053  Loss: 0.0807  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  850/1053  Loss: 0.1300  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  900/1053  Loss: 0.2496  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step  950/1053  Loss: 0.2486  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step 1000/1053  Loss: 0.1349  GPU: 100%  Mem: 6358MB
+  [Epoch 1] Step 1050/1053  Loss: 0.0508  GPU: 100%  Mem: 6358MB
+
+  ── Epoch 1 results ──
+  Wall time:       786.3s
+  Avg loss:        0.2058
+  Throughput:      85.7 samples/sec (global)
+  Avg GPU util:    100.0%
+  Peak GPU mem:    6358 MB / 15360 MB
+  Avg step time:   745.5ms  (fwd: 205.4 | bwd: 416.3 | sync: 123.8)
+  Comm overhead:   16.6%
+  Cost (epoch):    $0.2298
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9243
+
+  [Epoch 2] Step    0/1053  Loss: 0.1551  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step   50/1053  Loss: 0.2121  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  100/1053  Loss: 0.0377  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  150/1053  Loss: 0.0447  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  200/1053  Loss: 0.1553  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  250/1053  Loss: 0.1365  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  300/1053  Loss: 0.1897  GPU: 99%  Mem: 6550MB
+  [Epoch 2] Step  350/1053  Loss: 0.0478  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  400/1053  Loss: 0.0307  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  450/1053  Loss: 0.0416  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  500/1053  Loss: 0.1300  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  550/1053  Loss: 0.2578  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  600/1053  Loss: 0.1346  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  650/1053  Loss: 0.0788  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  700/1053  Loss: 0.0775  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  750/1053  Loss: 0.0834  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  800/1053  Loss: 0.0228  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  850/1053  Loss: 0.0870  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  900/1053  Loss: 0.0565  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step  950/1053  Loss: 0.0658  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step 1000/1053  Loss: 0.3123  GPU: 100%  Mem: 6550MB
+  [Epoch 2] Step 1050/1053  Loss: 0.1127  GPU: 100%  Mem: 6550MB
+
+  ── Epoch 2 results ──
+  Wall time:       791.1s
+  Avg loss:        0.1041
+  Throughput:      85.1 samples/sec (global)
+  Avg GPU util:    100.0%
+  Peak GPU mem:    6550 MB / 15360 MB
+  Avg step time:   750.1ms  (fwd: 205.5 | bwd: 420.5 | sync: 124.1)
+  Comm overhead:   16.5%
+  Cost (epoch):    $0.2312
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9197
+
+  [Epoch 3] Step    0/1053  Loss: 0.1384  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step   50/1053  Loss: 0.2053  GPU: 99%  Mem: 6550MB
+  [Epoch 3] Step  100/1053  Loss: 0.0550  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  150/1053  Loss: 0.0124  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  200/1053  Loss: 0.0284  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  250/1053  Loss: 0.0449  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  300/1053  Loss: 0.0451  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  350/1053  Loss: 0.2024  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  400/1053  Loss: 0.0179  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  450/1053  Loss: 0.0403  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  500/1053  Loss: 0.0452  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  550/1053  Loss: 0.2043  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  600/1053  Loss: 0.0230  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  650/1053  Loss: 0.1270  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  700/1053  Loss: 0.0264  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  750/1053  Loss: 0.0571  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  800/1053  Loss: 0.0327  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  850/1053  Loss: 0.0468  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  900/1053  Loss: 0.1980  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step  950/1053  Loss: 0.0616  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step 1000/1053  Loss: 0.0470  GPU: 100%  Mem: 6550MB
+  [Epoch 3] Step 1050/1053  Loss: 0.1353  GPU: 100%  Mem: 6550MB
+
+  ── Epoch 3 results ──
+  Wall time:       792.9s
+  Avg loss:        0.0706
+  Throughput:      84.9 samples/sec (global)
+  Avg GPU util:    100.0%
+  Peak GPU mem:    6550 MB / 15360 MB
+  Avg step time:   751.8ms  (fwd: 205.6 | bwd: 421.3 | sync: 124.9)
+  Comm overhead:   16.6%
+  Cost (epoch):    $0.2317
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9209
+
+  Saved model + metrics to /workspace/output
+    - epoch_metrics.jsonl  (per-epoch summaries for tables)
+    - step_metrics.jsonl   (per-step detail for charts)
