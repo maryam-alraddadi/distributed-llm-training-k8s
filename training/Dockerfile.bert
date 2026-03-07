@@ -1,4 +1,5 @@
-# Default: Case A (BERT). Use -f Dockerfile.bert or -f Dockerfile.gpt for explicit build.
+# Case A: BERT Data Parallelism (Horovod)
+# Base: official Horovod image — PyTorch, CUDA, OpenMPI, NCCL, and Horovod
 FROM horovod/horovod:latest
 
 ENV DEBIAN_FRONTEND=noninteractive

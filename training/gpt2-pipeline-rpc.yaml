@@ -1,0 +1,61 @@
+# Case B: GPT-2 Pipeline Parallelism via PyTorch RPC
+# 2 pods: pod 0 runs master (rank 0) + worker1 (rank 1) on 1 GPU; pod 1 runs worker2 (rank 2) on 1 GPU.
+# Total: 2 GPUs. Pods discover each other via headless Service + Indexed Job hostnames.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gpt2-pipeline-rpc-service
+spec:
+  clusterIP: None
+  selector:
+    job-name: gpt2-pipeline-rpc
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gpt2-pipeline-rpc
+spec:
+  completions: 2
+  parallelism: 2
+  completionMode: Indexed
+  backoffLimit: 1
+  template:
+    spec:
+      subdomain: gpt2-pipeline-rpc-service
+      restartPolicy: Never
+      initContainers:
+        - name: wait-for-dns
+          image: 200227355503.dkr.ecr.us-east-1.amazonaws.com/hpcc-capstone/gpt-pipeline-training:v1
+          imagePullPolicy: Always
+          command: ["sleep", "30"]
+      containers:
+        - name: trainer
+          image: 200227355503.dkr.ecr.us-east-1.amazonaws.com/hpcc-capstone/gpt-pipeline-training:v1
+          imagePullPolicy: Always
+          command:
+            - /bin/bash
+            - -c
+          args:
+            - |
+              # Pod 0: worker1 + master. Pod 1: worker2.
+              export MASTER_ADDR="gpt2-pipeline-rpc-0.gpt2-pipeline-rpc-service"
+              export MASTER_PORT="29500"
+              export WORLD_SIZE="3"
+              if [ "$JOB_COMPLETION_INDEX" = "0" ]; then
+                python /workspace/train_gpt2_pipeline.py --rank 1 &
+                python /workspace/train_gpt2_pipeline.py --rank 0 --dataset wikitext --batch-size 8 --micro-batch-size 2 --epochs 3 --max-seq-len 128
+              else
+                python /workspace/train_gpt2_pipeline.py --rank 2
+              fi
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: output
+              mountPath: /workspace/output
+      volumes:
+        - name: output
+          emptyDir: {}
+      nodeSelector:
+        accelerator: nvidia-t4

@@ -1,0 +1,202 @@
+Failed to add the host to the list of known hosts (/root/.ssh/known_hosts).
+=======================================================
+  BERT Data-Parallel Training (Horovod + NCCL)
+=======================================================
+  Workers:          1
+  Dataset:          SST2
+  Per-worker batch: 32
+  Global batch:     32
+  Base LR:          2e-05
+  Scaled LR:        2e-05
+  Epochs:           3
+  GPU memory:       15360 MB per device
+
+  Loading and tokenizing dataset ...
+/usr/local/lib/python3.8/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 35.3kB [00:00, 87.1MB/s]
+Downloading data:   0%|          | 0.00/3.11M [00:00<?, ?B/s]Downloading data: 100%|██████████| 3.11M/3.11M [00:00<00:00, 39.5MB/s]
+Downloading data:   0%|          | 0.00/72.8k [00:00<?, ?B/s]Downloading data: 100%|██████████| 72.8k/72.8k [00:00<00:00, 1.72MB/s]
+Downloading data:   0%|          | 0.00/148k [00:00<?, ?B/s]Downloading data: 100%|██████████| 148k/148k [00:00<00:00, 3.11MB/s]
+Generating train split:   0%|          | 0/67349 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 67349/67349 [00:00<00:00, 2329173.65 examples/s]
+Generating validation split:   0%|          | 0/872 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 872/872 [00:00<00:00, 516294.90 examples/s]
+Generating test split:   0%|          | 0/1821 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1821/1821 [00:00<00:00, 893417.66 examples/s]
+Map:   0%|          | 0/67349 [00:00<?, ? examples/s]Map:   1%|▏         | 1000/67349 [00:00<00:19, 3329.73 examples/s]Map:   3%|▎         | 2000/67349 [00:00<00:19, 3405.36 examples/s]Map:   4%|▍         | 3000/67349 [00:00<00:18, 3422.76 examples/s]Map:   6%|▌         | 4000/67349 [00:01<00:18, 3434.94 examples/s]Map:   7%|▋         | 5000/67349 [00:01<00:18, 3432.90 examples/s]Map:   9%|▉         | 6000/67349 [00:01<00:17, 3428.01 examples/s]Map:  10%|█         | 7000/67349 [00:02<00:17, 3447.07 examples/s]Map:  12%|█▏        | 8000/67349 [00:02<00:17, 3472.52 examples/s]Map:  13%|█▎        | 9000/67349 [00:02<00:16, 3441.83 examples/s]Map:  15%|█▍        | 10000/67349 [00:02<00:16, 3404.85 examples/s]Map:  16%|█▋        | 11000/67349 [00:03<00:16, 3404.00 examples/s]Map:  18%|█▊        | 12000/67349 [00:03<00:16, 3422.47 examples/s]Map:  19%|█▉        | 13000/67349 [00:03<00:15, 3423.09 examples/s]Map:  21%|██        | 14000/67349 [00:04<00:15, 3387.07 examples/s]Map:  22%|██▏       | 15000/67349 [00:04<00:16, 3201.77 examples/s]Map:  24%|██▍       | 16000/67349 [00:04<00:15, 3237.50 examples/s]Map:  25%|██▌       | 17000/67349 [00:05<00:15, 3243.87 examples/s]Map:  27%|██▋       | 18000/67349 [00:05<00:14, 3346.47 examples/s]Map:  28%|██▊       | 19000/67349 [00:05<00:14, 3370.76 examples/s]Map:  30%|██▉       | 20000/67349 [00:05<00:14, 3377.98 examples/s]Map:  31%|███       | 21000/67349 [00:06<00:13, 3402.54 examples/s]Map:  33%|███▎      | 22000/67349 [00:06<00:13, 3398.14 examples/s]Map:  34%|███▍      | 23000/67349 [00:06<00:13, 3388.10 examples/s]Map:  36%|███▌      | 24000/67349 [00:07<00:12, 3425.40 examples/s]Map:  37%|███▋      | 25000/67349 [00:07<00:12, 3466.97 examples/s]Map:  39%|███▊      | 26000/67349 [00:07<00:11, 3464.82 examples/s]Map:  40%|████      | 27000/67349 [00:07<00:11, 3448.05 examples/s]Map:  42%|████▏     | 28000/67349 [00:08<00:11, 3409.28 examples/s]Map:  43%|████▎     | 29000/67349 [00:08<00:11, 3420.26 examples/s]Map:  45%|████▍     | 30000/67349 [00:08<00:10, 3447.32 examples/s]Map:  46%|████▌     | 31000/67349 [00:09<00:10, 3446.92 examples/s]Map:  48%|████▊     | 32000/67349 [00:09<00:10, 3214.08 examples/s]Map:  49%|████▉     | 33000/67349 [00:09<00:10, 3249.37 examples/s]Map:  50%|█████     | 34000/67349 [00:10<00:10, 3277.63 examples/s]Map:  52%|█████▏    | 35000/67349 [00:10<00:09, 3302.36 examples/s]Map:  53%|█████▎    | 36000/67349 [00:10<00:09, 3335.21 examples/s]Map:  55%|█████▍    | 37000/67349 [00:10<00:09, 3330.24 examples/s]Map:  56%|█████▋    | 38000/67349 [00:11<00:08, 3397.39 examples/s]Map:  58%|█████▊    | 39000/67349 [00:11<00:08, 3401.40 examples/s]Map:  59%|█████▉    | 40000/67349 [00:11<00:07, 3419.91 examples/s]Map:  61%|██████    | 41000/67349 [00:12<00:07, 3399.26 examples/s]Map:  62%|██████▏   | 42000/67349 [00:12<00:07, 3432.86 examples/s]Map:  64%|██████▍   | 43000/67349 [00:12<00:07, 3418.53 examples/s]Map:  65%|██████▌   | 44000/67349 [00:12<00:06, 3420.65 examples/s]Map:  67%|██████▋   | 45000/67349 [00:13<00:06, 3432.72 examples/s]Map:  68%|██████▊   | 46000/67349 [00:13<00:06, 3425.57 examples/s]Map:  70%|██████▉   | 47000/67349 [00:13<00:05, 3448.00 examples/s]Map:  71%|███████▏  | 48000/67349 [00:14<00:05, 3231.50 examples/s]Map:  73%|███████▎  | 49000/67349 [00:14<00:05, 3259.20 examples/s]Map:  74%|███████▍  | 50000/67349 [00:14<00:05, 3299.14 examples/s]Map:  76%|███████▌  | 51000/67349 [00:15<00:04, 3333.47 examples/s]Map:  77%|███████▋  | 52000/67349 [00:15<00:04, 3330.02 examples/s]Map:  79%|███████▊  | 53000/67349 [00:15<00:04, 3359.55 examples/s]Map:  80%|████████  | 54000/67349 [00:15<00:03, 3389.02 examples/s]Map:  82%|████████▏ | 55000/67349 [00:16<00:03, 3401.03 examples/s]Map:  83%|████████▎ | 56000/67349 [00:16<00:03, 3411.59 examples/s]Map:  85%|████████▍ | 57000/67349 [00:16<00:03, 3431.36 examples/s]Map:  86%|████████▌ | 58000/67349 [00:17<00:02, 3432.33 examples/s]Map:  88%|████████▊ | 59000/67349 [00:17<00:02, 3435.54 examples/s]Map:  89%|████████▉ | 60000/67349 [00:17<00:02, 3435.29 examples/s]Map:  91%|█████████ | 61000/67349 [00:18<00:01, 3431.96 examples/s]Map:  92%|█████████▏| 62000/67349 [00:18<00:01, 3431.53 examples/s]Map:  94%|█████████▎| 63000/67349 [00:18<00:01, 3436.23 examples/s]Map:  95%|█████████▌| 64000/67349 [00:18<00:00, 3435.23 examples/s]Map:  97%|█████████▋| 65000/67349 [00:19<00:00, 3427.65 examples/s]Map:  98%|█████████▊| 66000/67349 [00:19<00:00, 3450.51 examples/s]Map:  99%|█████████▉| 67000/67349 [00:19<00:00, 3459.75 examples/s]Map: 100%|██████████| 67349/67349 [00:19<00:00, 3451.82 examples/s]Map: 100%|██████████| 67349/67349 [00:19<00:00, 3389.68 examples/s]
+  Train: 67,349 samples
+  Val:   872 samples
+  Loading BERT-base-uncased ...
+
+Map:   0%|          | 0/872 [00:00<?, ? examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2091.61 examples/s]Map: 100%|██████████| 872/872 [00:00<00:00, 2079.79 examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  [Epoch 1] Step    0/2105  Loss: 0.7752  GPU: 100%  Mem: 5332MB
+  [Epoch 1] Step   50/2105  Loss: 0.5775  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  100/2105  Loss: 0.2531  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step  150/2105  Loss: 0.1678  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  200/2105  Loss: 0.2513  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  250/2105  Loss: 0.3029  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  300/2105  Loss: 0.3814  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  350/2105  Loss: 0.1620  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  400/2105  Loss: 0.2752  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  450/2105  Loss: 0.3632  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  500/2105  Loss: 0.1743  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step  550/2105  Loss: 0.2821  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step  600/2105  Loss: 0.1991  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  650/2105  Loss: 0.3449  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  700/2105  Loss: 0.0817  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  750/2105  Loss: 0.2482  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  800/2105  Loss: 0.3477  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step  850/2105  Loss: 0.1888  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  900/2105  Loss: 0.1888  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step  950/2105  Loss: 0.1937  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1000/2105  Loss: 0.1149  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1050/2105  Loss: 0.1911  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1100/2105  Loss: 0.1450  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1150/2105  Loss: 0.2162  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1200/2105  Loss: 0.0562  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1250/2105  Loss: 0.1480  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1300/2105  Loss: 0.1000  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1350/2105  Loss: 0.0665  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1400/2105  Loss: 0.0899  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1450/2105  Loss: 0.0957  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1500/2105  Loss: 0.1388  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1550/2105  Loss: 0.0971  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1600/2105  Loss: 0.2055  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1650/2105  Loss: 0.1822  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1700/2105  Loss: 0.2335  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1750/2105  Loss: 0.1455  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1800/2105  Loss: 0.3398  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1850/2105  Loss: 0.2339  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 1900/2105  Loss: 0.2878  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 1950/2105  Loss: 0.1763  GPU: 99%  Mem: 6230MB
+  [Epoch 1] Step 2000/2105  Loss: 0.0749  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 2050/2105  Loss: 0.1600  GPU: 100%  Mem: 6230MB
+  [Epoch 1] Step 2100/2105  Loss: 0.1430  GPU: 100%  Mem: 6230MB
+
+  ── Epoch 1 results ──
+  Wall time:       1246.7s
+  Avg loss:        0.2048
+  Throughput:      54.0 samples/sec (global)
+  Avg GPU util:    99.8%
+  Peak GPU mem:    6230 MB / 15360 MB
+  Avg step time:   591.0ms  (fwd: 210.1 | bwd: 341.0 | sync: 40.0)
+  Comm overhead:   6.8%
+  Cost (epoch):    $0.1822
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9266
+
+  [Epoch 2] Step    0/2105  Loss: 0.0873  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step   50/2105  Loss: 0.0162  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step  100/2105  Loss: 0.3188  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  150/2105  Loss: 0.3383  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  200/2105  Loss: 0.0200  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step  250/2105  Loss: 0.0442  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  300/2105  Loss: 0.0758  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  350/2105  Loss: 0.0218  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step  400/2105  Loss: 0.0922  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  450/2105  Loss: 0.1026  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  500/2105  Loss: 0.0328  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  550/2105  Loss: 0.0394  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  600/2105  Loss: 0.0540  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step  650/2105  Loss: 0.2467  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  700/2105  Loss: 0.0754  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step  750/2105  Loss: 0.0243  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  800/2105  Loss: 0.0475  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  850/2105  Loss: 0.2394  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  900/2105  Loss: 0.1139  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step  950/2105  Loss: 0.0813  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1000/2105  Loss: 0.0308  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1050/2105  Loss: 0.0415  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1100/2105  Loss: 0.1602  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1150/2105  Loss: 0.2495  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1200/2105  Loss: 0.0838  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1250/2105  Loss: 0.2574  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1300/2105  Loss: 0.1676  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1350/2105  Loss: 0.1386  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1400/2105  Loss: 0.0504  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1450/2105  Loss: 0.0222  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1500/2105  Loss: 0.0409  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1550/2105  Loss: 0.0511  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1600/2105  Loss: 0.0269  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1650/2105  Loss: 0.0575  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1700/2105  Loss: 0.0673  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1750/2105  Loss: 0.0425  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1800/2105  Loss: 0.1000  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1850/2105  Loss: 0.0342  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 1900/2105  Loss: 0.1245  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 1950/2105  Loss: 0.0606  GPU: 100%  Mem: 6422MB
+  [Epoch 2] Step 2000/2105  Loss: 0.1285  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 2050/2105  Loss: 0.1132  GPU: 99%  Mem: 6422MB
+  [Epoch 2] Step 2100/2105  Loss: 0.1460  GPU: 99%  Mem: 6422MB
+
+  ── Epoch 2 results ──
+  Wall time:       1246.1s
+  Avg loss:        0.1072
+  Throughput:      54.0 samples/sec (global)
+  Avg GPU util:    99.8%
+  Peak GPU mem:    6422 MB / 15360 MB
+  Avg step time:   590.8ms  (fwd: 209.2 | bwd: 341.6 | sync: 40.0)
+  Comm overhead:   6.8%
+  Cost (epoch):    $0.1821
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9197
+
+  [Epoch 3] Step    0/2105  Loss: 0.0870  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step   50/2105  Loss: 0.0132  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  100/2105  Loss: 0.0260  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  150/2105  Loss: 0.0324  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  200/2105  Loss: 0.0324  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  250/2105  Loss: 0.0116  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  300/2105  Loss: 0.0106  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  350/2105  Loss: 0.0269  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  400/2105  Loss: 0.1300  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  450/2105  Loss: 0.0979  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  500/2105  Loss: 0.0429  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  550/2105  Loss: 0.0221  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  600/2105  Loss: 0.0360  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  650/2105  Loss: 0.0349  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  700/2105  Loss: 0.2306  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  750/2105  Loss: 0.0146  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  800/2105  Loss: 0.0139  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  850/2105  Loss: 0.0342  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step  900/2105  Loss: 0.1117  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step  950/2105  Loss: 0.0175  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1000/2105  Loss: 0.0772  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1050/2105  Loss: 0.0138  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1100/2105  Loss: 0.0491  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1150/2105  Loss: 0.0899  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1200/2105  Loss: 0.1821  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1250/2105  Loss: 0.1263  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1300/2105  Loss: 0.0662  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1350/2105  Loss: 0.0154  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1400/2105  Loss: 0.0748  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1450/2105  Loss: 0.0052  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1500/2105  Loss: 0.0433  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1550/2105  Loss: 0.1212  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1600/2105  Loss: 0.0123  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1650/2105  Loss: 0.1944  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1700/2105  Loss: 0.1733  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1750/2105  Loss: 0.0145  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1800/2105  Loss: 0.4775  GPU: 99%  Mem: 6422MB
+  [Epoch 3] Step 1850/2105  Loss: 0.1541  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1900/2105  Loss: 0.1283  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 1950/2105  Loss: 0.2552  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 2000/2105  Loss: 0.0474  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 2050/2105  Loss: 0.1275  GPU: 100%  Mem: 6422MB
+  [Epoch 3] Step 2100/2105  Loss: 0.2047  GPU: 100%  Mem: 6422MB
+
+  ── Epoch 3 results ──
+  Wall time:       1243.7s
+  Avg loss:        0.0724
+  Throughput:      54.2 samples/sec (global)
+  Avg GPU util:    99.7%
+  Peak GPU mem:    6422 MB / 15360 MB
+  Avg step time:   589.7ms  (fwd: 208.7 | bwd: 341.0 | sync: 40.0)
+  Comm overhead:   6.8%
+  Cost (epoch):    $0.1817
+  Cost (sample):   $0.000003
+  Val accuracy:    0.9197
+
+  Saved model + metrics to /workspace/output
+    - epoch_metrics.jsonl  (per-epoch summaries for tables)
+    - step_metrics.jsonl   (per-step detail for charts)

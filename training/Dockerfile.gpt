@@ -1,0 +1,15 @@
+# Case B: GPT-2 Pipeline Parallelism (PyTorch RPC)
+# Lighter base: PyTorch + CUDA (no Horovod)
+FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
+
+RUN pip install --no-cache-dir \
+    transformers==4.36.2 \
+    datasets==2.16.1 \
+    pynvml
+
+WORKDIR /workspace
+COPY train_gpt2_pipeline.py .
